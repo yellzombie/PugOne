@@ -1,10 +1,11 @@
+const { isValidObjectId } = require('mongoose');
 const mongoose = require('./db.js');
 const Schema = mongoose.Schema;
 
 const ItemSchema = new Schema({
     user_id: String,
     name: String,
-    category_id: String,
+    category_id:String,
     date: {type: Number, default: new Date().getTime()},
     start_bid_date: {type: Number, default: new Date().getTime()},
     images: String,

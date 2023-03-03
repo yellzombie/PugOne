@@ -61,7 +61,7 @@ router.post('/login', passport.authenticate('local', {
 })
 );
 
-router.get('/logout', checkAuthenticated, (req, res)=>{
+/*router.get('/logout', checkAuthenticated, (req, res)=>{
 (async ()=>{
     try {
         req.logOut();
@@ -72,7 +72,19 @@ router.get('/logout', checkAuthenticated, (req, res)=>{
     }
 })();
 });
+*/
 
+router.get('/logout', (req, res) => {
+    req.session.destroy(err => {
+      if (err) {
+        console.error(err);
+        res.status(500).send('Server error');
+      } else {
+        res.send('Logged out');
+      }
+    });
+  });
+  
 
 router.get('/register', checkNotAuthenticated, (req, res)=>{
     (async ()=>{
@@ -97,7 +109,7 @@ router.post('/register', checkNotAuthenticated, (req, res)=>{
                     errors.push('Please fill all the fields');
             }
             if(req.body.password !== req.body.password2){
-                    errors.push('Passwords are not mutch');
+                    errors.push('Passwords are not match');
             }
             let checkEmail = await Users.find({email: req.body.email}, {_id: 1});
             if(checkEmail.length > 0){

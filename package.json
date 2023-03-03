@@ -1,7 +1,7 @@
 {
   "name": "bid",
   "version": "1.0.0",
-  "description": "",
+  "description": "This app is developed with Node.js and MongoDB, WS(Websocket) library.\r Online bidding items, with timer limits.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -20,9 +20,18 @@
     "formidable": "^1.2.2",
     "mongoose": "^5.9.2",
     "mv": "^2.1.1",
-    "passport": "^0.4.1",
+    "passport": "^0.6.0",
     "passport-local": "^1.0.0",
-    "pug": "^2.0.4",
+    "pug": "^3.0.2",
+    "pug-to-react-element": "^0.5.1",
     "ws": "^7.2.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KamyarLajani/Online-Bid-Items-NodeJS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KamyarLajani/Online-Bid-Items-NodeJS/issues"
+  },
+  "homepage": "https://github.com/KamyarLajani/Online-Bid-Items-NodeJS#readme"
 }

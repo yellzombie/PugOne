@@ -61,16 +61,18 @@ include ./header
                         p Details
                         textarea.form-control(type='text' name='detail' required)
                     .form-group
-                        p Price in USD
+                        p Price in NPR
                         input.form-control(type='number' name='price' required)
                     .form-group
                         p Images
                         input.form-control(type='file' name='images' multiple required)
-                    .form-group
+                    //.form-group
                         select.form-control(name='category' required)
                             option(value='') -- Select Category --
-                            for cat in categories
-                                option(value=cat._id)= cat.name
+                            for cat  in categories
+                                option(value=cat._id)=cat.name
+                            option(value="Vegetable")='Vegetable'
+                            option(value="Fruit")='Fruit' 
                     .form-group
                         select.form-control(name='start_bid_date' required)
                             option(value='') -- Bid start after --
