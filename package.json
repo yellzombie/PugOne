@@ -4,7 +4,7 @@
   "description": "This app is developed with Node.js and MongoDB, WS(Websocket) library.\r Online bidding items, with timer limits.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
@@ -28,10 +28,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KamyarLajani/Online-Bid-Items-NodeJS.git"
+    "url": ""
   },
   "bugs": {
-    "url": "https://github.com/KamyarLajani/Online-Bid-Items-NodeJS/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/KamyarLajani/Online-Bid-Items-NodeJS#readme"
+  "homepage": ""
 }

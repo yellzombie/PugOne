@@ -54,7 +54,7 @@ body
                             h5 Add a bid
                             .form-inline
                                 input.form-control(style='width: 80%' type='number' value=`${currentPrice}` min=`${currentPrice+1}`)
-                                p(style='position: relative; top: 5px; left: 10px') USD
+                                p(style='position: relative; top: 5px; left: 10px') RS 
                             p.error(style='color: red; margin: 10px 0px')
                             button.form-control.btn.btn-primary(onclick='obj.sendBid()' style='margin-top: 10px') Add
             .row(style='margin: 30px 5px;')
@@ -93,9 +93,8 @@ body
                 .col-12
                     div(style='overflow: auto;')
                         a(href='/' style='display: block; float: left; margin: 5px 10px;') Home
-                        a(href='/login' style='display: block; float: left; margin: 5px 10px;') Sign in
-                        a(href='/logout' style='display: block; float: left; margin: 5px 10px;') Sign out
                         a(href='/profile' style='display: block; float: left; margin: 5px 10px;') Profile
+                        
                     h4 There is no item in the queue       
 
     if !noItem

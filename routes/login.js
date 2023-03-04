@@ -80,7 +80,7 @@ router.get('/logout', (req, res) => {
         console.error(err);
         res.status(500).send('Server error');
       } else {
-        res.send('Logged out');
+        res.redirect('/');
       }
     });
   });
